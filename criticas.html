@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Críticas de Cine | CineVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-cine" src="img/logo-cine.png" alt="CineVerse Logo">
+                    <span class="brand-name">CineVerse</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="peliculas.html"><i class="fas fa-film me-1"></i>Películas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="criticas.html"><i class="fas fa-star me-1"></i>Críticas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex search-form" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar películas..." aria-label="Search" id="searchInput">
+                        <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="ms-3 filter-toggle">
+                        <button class="btn btn-primary" id="filterBtn"><i class="fas fa-filter me-1"></i>Filtrar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="cabecera-critica">
+        <h1 class="text-center my-4">Últimas Críticas</h1>
+        
+        <div id="criticas-container">
+          
+        </div>
+        
+        <div class="text-center my-4">
+            <button id="load-more" class="btn btn-primary">Cargar más críticas</button>
+        </div>
+    </main>
+
+  
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-2">&copy; 2025 CineVerse - Disfruta el cine como nunca antes</p>
+        <div class="d-flex justify-content-center mb-2">
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="small">
+            <a href="#" class="text-white text-decoration-none mx-1">Términos</a> |
+            <a href="#" class="text-white text-decoration-none mx-1">Privacidad</a>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

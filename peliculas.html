@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas | CineVerse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-cine" src="img/logo-cine.png" alt="CineVerse Logo">
+                    <span class="brand-name">CineVerse</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="peliculas.html"><i class="fas fa-film me-1"></i>Películas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="criticas.html"><i class="fas fa-star me-1"></i>Críticas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex search-form" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar películas..." aria-label="Search" id="searchInput">
+                        <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="ms-3 filter-toggle">
+                        <button class="btn btn-primary" id="filterBtn"><i class="fas fa-filter me-1"></i>Filtrar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="filter-sidebar" id="filterSidebar">
+        <div class="filter-header">
+            <h4><i class="fas fa-filter me-2"></i>Filtros</h4>
+            <button class="btn-close" id="closeFilter"></button>
+        </div>
+        <div class="filter-content">
+            <div class="mb-4">
+                <h5>Géneros</h5>
+                <div class="form-check">
+                    <input class="form-check-input genre-filter" type="checkbox" value="accion" id="filterAccion">
+                    <label class="form-check-label" for="filterAccion">Acción</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input genre-filter" type="checkbox" value="animacion" id="filterAnimacion">
+                    <label class="form-check-label" for="filterAnimacion">Animación</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input genre-filter" type="checkbox" value="terror" id="filterTerror">
+                    <label class="form-check-label" for="filterTerror">Terror</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input genre-filter" type="checkbox" value="drama" id="filterDrama">
+                    <label class="form-check-label" for="filterDrama">Drama</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input genre-filter" type="checkbox" value="aventura" id="filterAventura">
+                    <label class="form-check-label" for="filterAventura">Aventura</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h5>Año</h5>
+                <select class="form-select" id="yearFilter">
+                    <option value="all">Todos los años</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <h5>Calificación</h5>
+                <div class="rating-filter">
+                    <div class="form-check">
+                        <input class="form-check-input rating-filter-input" type="radio" name="ratingFilter" id="ratingAll" value="all" checked>
+                        <label class="form-check-label" for="ratingAll">Todas</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input rating-filter-input" type="radio" name="ratingFilter" id="rating4" value="4">
+                        <label class="form-check-label" for="rating4">4+ estrellas</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input rating-filter-input" type="radio" name="ratingFilter" id="rating3" value="3">
+                        <label class="form-check-label" for="rating3">3+ estrellas</label>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary w-100" id="applyFilters">Aplicar filtros</button>
+            <button class="btn btn-outline-secondary w-100 mt-2" id="resetFilters">Restablecer</button>
+        </div>
+    </div>
+
+    <main class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h1 class="page-title"><i class="fas fa-film me-3"></i>Películas</h1>
+            <div class="sort-options">
+                <select class="form-select" id="sortSelect">
+                    <option value="popular">Más populares</option>
+                    <option value="recent">Más recientes</option>
+                    <option value="rating">Mejor valoradas</option>
+                    <option value="alpha">Orden alfabético</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="mb-5">
+            <h2 class="section-title"><i class="fas fa-fire me-2"></i>Tendencias</h2>
+            <div class="row g-4 movie-grid" id="trendingMovies">
+                <!-- Películas en tendencia se cargarán aquí -->
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title"><i class="fas fa-chart-line me-2"></i>Más vistas</h2>
+            <div class="row g-4 movie-grid" id="topMovies">
+                <!-- Películas más vistas se cargarán aquí -->
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="section-title"><i class="fas fa-clock me-2"></i>Próximos estrenos</h2>
+            <div class="row g-4 movie-grid" id="upcomingMovies">
+                <!-- Próximos estrenos se cargarán aquí -->
+            </div>
+        </section>
+
+        <div class="text-center mt-5">
+            <button class="btn btn-primary btn-lg" id="loadMore">Cargar más películas</button>
+        </div>
+    </main>
+
+   
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-2">&copy; 2025 CineVerse - Disfruta el cine como nunca antes</p>
+        <div class="d-flex justify-content-center mb-2">
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="small">
+            <a href="#" class="text-white text-decoration-none mx-1">Términos</a> |
+            <a href="#" class="text-white text-decoration-none mx-1">Privacidad</a>
+        </div>
+    </div>
+</footer>
+
+
+   
+    <div class="modal fade" id="movieModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="movieModalTitle">Título de la película</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="" class="img-fluid mb-3" id="movieModalImage" alt="">
+                            <div class="d-flex justify-content-between">
+                                <div class="rating">
+                                    <span class="fw-bold">Calificación:</span>
+                                    <span id="movieModalRating"></span>
+                                </div>
+                                <div class="year">
+                                    <span class="fw-bold">Año:</span>
+                                    <span id="movieModalYear"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h6>Sinopsis</h6>
+                            <p id="movieModalSynopsis"></p>
+                            <div class="movie-info">
+                                <p><span class="fw-bold">Género:</span> <span id="movieModalGenre"></span></p>
+                                <p><span class="fw-bold">Duración:</span> <span id="movieModalDuration"></span></p>
+                                <p><span class="fw-bold">Director:</span> <span id="movieModalDirector"></span></p>
+                                <p><span class="fw-bold">Reparto:</span> <span id="movieModalCast"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#" class="btn btn-primary" id="movieModalLink">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

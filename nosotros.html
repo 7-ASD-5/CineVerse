@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | CineVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-cine" src="img/logo-cine.png" alt="CineVerse Logo">
+                    <span class="brand-name">CineVerse</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="peliculas.html"><i class="fas fa-film me-1"></i>Películas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="criticas.html"><i class="fas fa-star me-1"></i>Críticas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="nosotros.html"><i class="fas fa-users me-1"></i>Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex search-form" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar películas..." aria-label="Search" id="searchInput">
+                        <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="ms-3 filter-toggle">
+                        <button class="btn btn-primary" id="filterBtn"><i class="fas fa-filter me-1"></i>Filtrar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Nuestra Historia</h1>
+            <p class="lead">Conoce más sobre quienes hacemos posible la magia del cine</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="mission-vision">
+            <div class="card">
+                <div class="card-header text-center">
+                    <i class="fas fa-bullseye me-2"></i>Misión
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Nuestra misión es brindar experiencias cinematográficas únicas e inmersivas, combinando la magia del cine con tecnología de vanguardia, comodidad y un servicio excepcional. Buscamos crear un espacio donde las personas puedan disfrutar, emocionarse y conectar a través de historias que trascienden la pantalla.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header text-center">
+                    <i class="fas fa-eye me-2"></i>Visión
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Ser el cine líder en innovación y experiencia en Latinoamérica, reconocido por transformar cada visita en un viaje inolvidable a través del universo del séptimo arte.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mb-5">Nuestros Valores</h2>
+        
+        <div class="row text-center mb-5" id="valores-container">
+            
+        </div>
+
+        <h2 class="text-center mb-5">Nuestro Equipo</h2>
+        
+        <div class="row team-section">
+            <div class="col-md-4 team-member">
+                <img src="img/sherin.webp" alt="Director General" class="img-fluid">
+                <h3>Sherin Ccahuay</h3>
+                <p class="text-primary">Director General</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin mx-1"></i></a>
+                    <a href="#"><i class="fab fa-twitter mx-1"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="img/hector.jfif" alt="Gerente de Operaciones" class="img-fluid">
+                <h3>Hector Ramos</h3>
+                <p class="text-primary">Gerente de Operaciones</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin mx-1"></i></a>
+                    <a href="#"><i class="fab fa-instagram mx-1"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="img/ayvar.jpg" alt="Jefe de Programación" class="img-fluid">
+                <h3>Ayvar Jose</h3>
+                <p class="text-primary">Jefe de Programación</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github mx-1"></i></a>
+                    <a href="#"><i class="fab fa-twitter mx-1"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mb-5">Nuestra Historia</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>2015</h3>
+                    <p>Fundación de CineVerse con una sola sala en el centro de la ciudad, con la visión de ofrecer una experiencia cinematográfica diferente.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>2018</h3>
+                    <p>Expansión a 5 salas con tecnología 4K y sonido Dolby Atmos, convirtiéndonos en pioneros en la región.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>2020</h3>
+                    <p>Implementación de butacas VIP con servicio a asiento y barra de snacks gourmet, elevando el estándar de comodidad.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>2023</h3>
+                    <p>Apertura de nuestro primer complejo multicinema con 12 salas, incluyendo una sala IMAX y otra con tecnología 4DX.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>2025</h3>
+                    <p>Lanzamiento de nuestra plataforma digital para reservas y membresías premium, completando nuestra transformación digital.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-2">&copy; 2025 CineVerse - Disfruta el cine como nunca antes</p>
+        <div class="d-flex justify-content-center mb-2">
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="small">
+            <a href="#" class="text-white text-decoration-none mx-1">Términos</a> |
+            <a href="#" class="text-white text-decoration-none mx-1">Privacidad</a>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const valores = [
+        {
+            icono: 'fas fa-heart',
+            titulo: 'Pasión',
+            descripcion: 'Amamos el cine y transmitimos esa emoción en cada detalle.'
+        },
+        {
+            icono: 'fas fa-lightbulb',
+            titulo: 'Innovación',
+            descripcion: 'Buscamos constantemente nuevas formas de mejorar la experiencia cinematográfica.'
+        },
+        {
+            icono: 'fas fa-users',
+            titulo: 'Comunidad',
+            descripcion: 'Creemos en el poder del cine para unir personas y crear conexiones.'
+        },
+        {
+            icono: 'fas fa-medal',
+            titulo: 'Excelencia',
+            descripcion: 'Nos esforzamos por ofrecer siempre el mejor servicio y calidad.'
+        }
+    ];
+
+    // Cargar valores dinámicamente
+    const valoresContainer = document.getElementById('valores-container');
+    valores.forEach(valor => {
+        const valorElement = document.createElement('div');
+        valorElement.className = 'col-md-3 mb-4';
+        valorElement.innerHTML = `
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="${valor.icono} fa-3x text-primary mb-3"></i>
+                    <h4>${valor.titulo}</h4>
+                    <p>${valor.descripcion}</p>
+                </div>
+            </div>
+        `;
+        valoresContainer.appendChild(valorElement);
+    });
+
+    // Efecto de aparición para la línea de tiempo
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    function checkTimeline() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+        
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            
+            if (itemTop < triggerBottom) {
+                item.style.opacity = '1';
+                item.style.transform = 'translateX(0)';
+            }
+        });
+    }
+    
+    // Inicializar
+    timelineItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transition = 'all 0.5s ease';
+        
+        if (item.classList.contains('left')) {
+            item.style.transform = 'translateX(-50px)';
+        } else {
+            item.style.transform = 'translateX(50px)';
+        }
+    });
+    
+    window.addEventListener('scroll', checkTimeline);
+    checkTimeline(); // Comprobar al cargar la página
+    
+    // Funcionalidad de búsqueda
+    const searchForm = document.querySelector('.search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            alert(`Buscando: ${searchTerm}\nEsta funcionalidad se conectará con el sistema de películas.`);
+            // Aquí iría la lógica real de búsqueda
+        });
+    }
+    
+    // Botón de filtro
+    const filterBtn = document.getElementById('filterBtn');
+    if (filterBtn) {
+        filterBtn.addEventListener('click', function() {
+            alert('Mostrar opciones de filtro\nEsta funcionalidad se implementará completamente en la página de películas.');
+        });
+    }
+    
+    // Animación para las tarjetas de misión/visión
+    const cards = document.querySelectorAll('.mission-vision .card');
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `all 0.5s ease ${index * 0.2}s`;
+        
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100);
+    });
+});</script>
+
+</body>
+</html>
