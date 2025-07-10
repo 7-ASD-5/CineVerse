@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Chris Sanders",
             cast: "Daveigh Chase, Chris Sanders, Tia Carrere",
             synopsis: "La historia de una niña hawaiana y su extraño pero adorable amigo alienígena que se parece a un perro.",
-            link: "pelis/pelicula1.html",
+            link: "pelis/liloystitch.html",
             trending: true,
             top: false,
             upcoming: false
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Gerard Johnstone",
             cast: "Allison Williams, Violet McGraw, Amie Donald",
             synopsis: "La secuela de la exitosa película de terror sobre una muñeca robot con inteligencia artificial que se vuelve violenta.",
-            link: "pelis/pelicula2.html",
+            link: "pelis/megan.html",
             trending: true,
             top: true,
             upcoming: false
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Joseph Kosinski",
             cast: "Brad Pitt, Damson Idris, Javier Bardem",
             synopsis: "Una emocionante película sobre el mundo de la Fórmula 1, llena de acción y drama.",
-            link: "pelis/pelicula3.html",
+            link: "pelis/formula.html",
             trending: true,
             top: true,
             upcoming: false
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Dean DeBlois",
             cast: "Jay Baruchel, Gerard Butler, America Ferrera",
             synopsis: "Nueva entrega de la popular saga sobre vikingos y dragones.",
-            link: "pelis/pelicula4.html",
+            link: "pelis/dragon.html",
             trending: true,
             top: false,
             upcoming: true
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Jeffrey Reddick",
             cast: "Devon Sawa, Ali Larter, Kerr Smith",
             synopsis: "Un grupo de adolescentes escapa milagrosamente de un accidente, pero la muerte viene a cobrar su deuda.",
-            link: "pelis/pelicula5.html",
+            link: "pelis/destinofinal.html",
             trending: true,
             top: false,
             upcoming: false
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Christopher McQuarrie",
             cast: "Tom Cruise, Hayley Atwell, Simon Pegg",
             synopsis: "Ethan Hunt y su equipo enfrentan su misión más peligrosa hasta ahora.",
-            link: "pelis/pelicula6.html",
+            link: "pelis/mision.html",
             trending: true,
             top: true,
             upcoming: false
@@ -108,14 +108,14 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Alex Garland",
             cast: "Natalie Portman, Oscar Isaac, Jennifer Jason Leigh",
             synopsis: "Un grupo de científicas se adentra en una zona misteriosa donde las leyes de la naturaleza no aplican.",
-            link: "pelis/pelicula7.html",
+            link: "pelis/exterminio.html",
             trending: true,
             top: false,
             upcoming: true
         },
         {
             id: 8,
-            title: "Smile 2",
+            title: "Jurassic World",
             image: "img/008.jpg",
             year: 2025,
             rating: 4.3,
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Parker Finn",
             cast: "Sosie Bacon, Kyle Gallner, Jessie T. Usher",
             synopsis: "Secuela del exitoso thriller psicológico sobre una maldición que se transmite a través de sonrisas.",
-            link: "pelis/pelicula8.html",
+            link: "pelis/jurassic.html",
             trending: true,
             top: false,
             upcoming: true
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Darren Aronofsky",
             cast: "Joaquin Phoenix, Jennifer Lawrence, Michelle Pfeiffer",
             synopsis: "Un drama ambiental sobre la lucha por salvar el planeta de la contaminación.",
-            link: "pelis/pelicula9.html",
+            link: "pelis/flow.html",
             trending: false,
             top: true,
             upcoming: false
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Brady Corbet",
             cast: "Joel Edgerton, Marion Cotillard, Sebastian Stan",
             synopsis: "Historia de un arquitecto que emigra a Estados Unidos después de la Segunda Guerra Mundial.",
-            link: "pelis/pelicula10.html",
+            link: "pelis/brutalist.html",
             trending: false,
             top: true,
             upcoming: false
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Pablo Larraín",
             cast: "Natalie Portman, Julianne Moore, Charles Melton",
             synopsis: "Drama histórico sobre una figura controvertida de la política estadounidense.",
-            link: "pelis/pelicula11.html",
+            link: "pelis/lasemilla.html",
             trending: false,
             top: true,
             upcoming: false
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
             director: "Jesse Eisenberg",
             cast: "Jesse Eisenberg, Kieran Culkin, Jennifer Grey",
             synopsis: "Dos primos viajan a Polonia para honrar a su abuela y terminan en un viaje de autodescubrimiento.",
-            link: "pelis/pelicula12.html",
+            link: "pelis/realdolor.html",
             trending: false,
             top: true,
             upcoming: false
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return false;
             }
             
-                        // Filtro de rating
+            // Filtro de rating
             if (currentFilters.rating !== 'all' && movie.rating < parseInt(currentFilters.rating)) {
                 return false;
             }
